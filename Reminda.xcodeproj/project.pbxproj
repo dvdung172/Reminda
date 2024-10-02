@@ -94,8 +94,11 @@
 		D9D210AB2CA9A0BA00EB6A4C /* Reminda */ = {
 			isa = PBXGroup;
 			children = (
-				D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */,
-				D9D210AE2CA9A0BA00EB6A4C /* ContentView.swift */,
+				D9D210DA2CA9A3D500EB6A4C /* Domain */,
+				D9D210D92CA9A3A700EB6A4C /* Datas */,
+				D9D210D82CA9A38900EB6A4C /* Configs */,
+				D9D210D72CA9A33A00EB6A4C /* Services */,
+				D9D210D62CA9A30100EB6A4C /* Presentation */,
 				D9D210B02CA9A0BC00EB6A4C /* Assets.xcassets */,
 				D9D210B22CA9A0BC00EB6A4C /* Preview Content */,
 			);
@@ -125,6 +128,76 @@
 				D9D210C92CA9A0BD00EB6A4C /* RemindaUITestsLaunchTests.swift */,
 			);
 			path = RemindaUITests;
+			sourceTree = "<group>";
+		};
+		D9D210D62CA9A30100EB6A4C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				D9D210DE2CAC442800EB6A4C /* Splash */,
+				D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D9D210D72CA9A33A00EB6A4C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D9D210DC2CA9A44900EB6A4C /* Extensions */,
+				D9D210DB2CA9A43F00EB6A4C /* Utilities */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D9D210D82CA9A38900EB6A4C /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Configs;
+			path = "Cònig";
+			sourceTree = "<group>";
+		};
+		D9D210D92CA9A3A700EB6A4C /* Datas */ = {
+			isa = PBXGroup;
+			children = (
+				D9D210DD2CA9A52D00EB6A4C /* Network */,
+			);
+			path = Datas;
+			sourceTree = "<group>";
+		};
+		D9D210DA2CA9A3D500EB6A4C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		D9D210DB2CA9A43F00EB6A4C /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D9D210DC2CA9A44900EB6A4C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D9D210DD2CA9A52D00EB6A4C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		D9D210DE2CAC442800EB6A4C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				D9D210AE2CA9A0BA00EB6A4C /* ContentView.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
