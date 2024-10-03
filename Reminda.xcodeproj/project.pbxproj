@@ -8,12 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		D9D210AD2CA9A0BA00EB6A4C /* RemindaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */; };
-		D9D210AF2CA9A0BA00EB6A4C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AE2CA9A0BA00EB6A4C /* ContentView.swift */; };
+		D9D210AF2CA9A0BA00EB6A4C /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AE2CA9A0BA00EB6A4C /* Splash.swift */; };
 		D9D210B12CA9A0BC00EB6A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D210B02CA9A0BC00EB6A4C /* Assets.xcassets */; };
 		D9D210B42CA9A0BC00EB6A4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D210B32CA9A0BC00EB6A4C /* Preview Assets.xcassets */; };
 		D9D210BE2CA9A0BD00EB6A4C /* RemindaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210BD2CA9A0BD00EB6A4C /* RemindaTests.swift */; };
 		D9D210C82CA9A0BD00EB6A4C /* RemindaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210C72CA9A0BD00EB6A4C /* RemindaUITests.swift */; };
 		D9D210CA2CA9A0BD00EB6A4C /* RemindaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210C92CA9A0BD00EB6A4C /* RemindaUITestsLaunchTests.swift */; };
+		D9D210E02CAD93E500EB6A4C /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210DF2CAD93E500EB6A4C /* Main.swift */; };
+		D9D210E22CADAA9700EB6A4C /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210E12CADAA9700EB6A4C /* Routes.swift */; };
+		D9D210E62CAE3EA100EB6A4C /* PreviewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210E52CAE3EA100EB6A4C /* PreviewModifier.swift */; };
+		D9D210E82CAE3F6400EB6A4C /* ViewExtension+Preview.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210E72CAE3F6400EB6A4C /* ViewExtension+Preview.swift */; };
+		D9D210EB2CAE48F600EB6A4C /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210EA2CAE48F600EB6A4C /* Home.swift */; };
+		D9D210ED2CAEE95E00EB6A4C /* ViewExtension+Dimens.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210EC2CAEE95E00EB6A4C /* ViewExtension+Dimens.swift */; };
+		D9D210F02CAEE98E00EB6A4C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210EF2CAEE98E00EB6A4C /* Constants.swift */; };
+		D9D210F32CAEEDA900EB6A4C /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210F22CAEEDA900EB6A4C /* NavBar.swift */; };
+		D9D210F62CAEF09C00EB6A4C /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210F52CAEF09C00EB6A4C /* CircleButtonView.swift */; };
+		D9D210F92CAEF12100EB6A4C /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210F82CAEF12100EB6A4C /* ColorExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +46,7 @@
 /* Begin PBXFileReference section */
 		D9D210A92CA9A0BA00EB6A4C /* Reminda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindaApp.swift; sourceTree = "<group>"; };
-		D9D210AE2CA9A0BA00EB6A4C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D9D210AE2CA9A0BA00EB6A4C /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
 		D9D210B02CA9A0BC00EB6A4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9D210B32CA9A0BC00EB6A4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D9D210B92CA9A0BD00EB6A4C /* RemindaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemindaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +54,16 @@
 		D9D210C32CA9A0BD00EB6A4C /* RemindaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemindaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D210C72CA9A0BD00EB6A4C /* RemindaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindaUITests.swift; sourceTree = "<group>"; };
 		D9D210C92CA9A0BD00EB6A4C /* RemindaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D9D210DF2CAD93E500EB6A4C /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		D9D210E12CADAA9700EB6A4C /* Routes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		D9D210E52CAE3EA100EB6A4C /* PreviewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewModifier.swift; sourceTree = "<group>"; };
+		D9D210E72CAE3F6400EB6A4C /* ViewExtension+Preview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewExtension+Preview.swift"; sourceTree = "<group>"; };
+		D9D210EA2CAE48F600EB6A4C /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		D9D210EC2CAEE95E00EB6A4C /* ViewExtension+Dimens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewExtension+Dimens.swift"; sourceTree = "<group>"; };
+		D9D210EF2CAEE98E00EB6A4C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9D210F22CAEEDA900EB6A4C /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		D9D210F52CAEF09C00EB6A4C /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		D9D210F82CAEF12100EB6A4C /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,12 +114,13 @@
 		D9D210AB2CA9A0BA00EB6A4C /* Reminda */ = {
 			isa = PBXGroup;
 			children = (
+				D9D210B02CA9A0BC00EB6A4C /* Assets.xcassets */,
+				D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */,
 				D9D210DA2CA9A3D500EB6A4C /* Domain */,
 				D9D210D92CA9A3A700EB6A4C /* Datas */,
 				D9D210D82CA9A38900EB6A4C /* Configs */,
 				D9D210D72CA9A33A00EB6A4C /* Services */,
 				D9D210D62CA9A30100EB6A4C /* Presentation */,
-				D9D210B02CA9A0BC00EB6A4C /* Assets.xcassets */,
 				D9D210B22CA9A0BC00EB6A4C /* Preview Content */,
 			);
 			path = Reminda;
@@ -133,8 +154,11 @@
 		D9D210D62CA9A30100EB6A4C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D9D210DF2CAD93E500EB6A4C /* Main.swift */,
+				D9D210F22CAEEDA900EB6A4C /* NavBar.swift */,
+				D9D210F72CAEF0A800EB6A4C /* Components */,
+				D9D210E92CAE48E800EB6A4C /* Home */,
 				D9D210DE2CAC442800EB6A4C /* Splash */,
-				D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -142,6 +166,7 @@
 		D9D210D72CA9A33A00EB6A4C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				D9D210E12CADAA9700EB6A4C /* Routes.swift */,
 				D9D210DC2CA9A44900EB6A4C /* Extensions */,
 				D9D210DB2CA9A43F00EB6A4C /* Utilities */,
 			);
@@ -174,6 +199,7 @@
 		D9D210DB2CA9A43F00EB6A4C /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				D9D210E42CAE3E7500EB6A4C /* Modifiers */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -181,6 +207,9 @@
 		D9D210DC2CA9A44900EB6A4C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				D9D210EE2CAEE97A00EB6A4C /* Constants */,
+				D9D210E32CAE3E1B00EB6A4C /* ViewExtensions */,
+				D9D210F82CAEF12100EB6A4C /* ColorExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -195,9 +224,50 @@
 		D9D210DE2CAC442800EB6A4C /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				D9D210AE2CA9A0BA00EB6A4C /* ContentView.swift */,
+				D9D210AE2CA9A0BA00EB6A4C /* Splash.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		D9D210E32CAE3E1B00EB6A4C /* ViewExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				D9D210E72CAE3F6400EB6A4C /* ViewExtension+Preview.swift */,
+				D9D210EC2CAEE95E00EB6A4C /* ViewExtension+Dimens.swift */,
+			);
+			path = ViewExtensions;
+			sourceTree = "<group>";
+		};
+		D9D210E42CAE3E7500EB6A4C /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D9D210E52CAE3EA100EB6A4C /* PreviewModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		D9D210E92CAE48E800EB6A4C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D9D210EA2CAE48F600EB6A4C /* Home.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		D9D210EE2CAEE97A00EB6A4C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				D9D210EF2CAEE98E00EB6A4C /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		D9D210F72CAEF0A800EB6A4C /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D9D210F52CAEF09C00EB6A4C /* CircleButtonView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,8 +400,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9D210AF2CA9A0BA00EB6A4C /* ContentView.swift in Sources */,
+				D9D210ED2CAEE95E00EB6A4C /* ViewExtension+Dimens.swift in Sources */,
+				D9D210E02CAD93E500EB6A4C /* Main.swift in Sources */,
+				D9D210F62CAEF09C00EB6A4C /* CircleButtonView.swift in Sources */,
+				D9D210E82CAE3F6400EB6A4C /* ViewExtension+Preview.swift in Sources */,
+				D9D210E22CADAA9700EB6A4C /* Routes.swift in Sources */,
+				D9D210AF2CA9A0BA00EB6A4C /* Splash.swift in Sources */,
+				D9D210F32CAEEDA900EB6A4C /* NavBar.swift in Sources */,
+				D9D210E62CAE3EA100EB6A4C /* PreviewModifier.swift in Sources */,
 				D9D210AD2CA9A0BA00EB6A4C /* RemindaApp.swift in Sources */,
+				D9D210EB2CAE48F600EB6A4C /* Home.swift in Sources */,
+				D9D210F02CAEE98E00EB6A4C /* Constants.swift in Sources */,
+				D9D210F92CAEF12100EB6A4C /* ColorExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,12 +583,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dungnv.Reminda;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reminda.Reminda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -532,12 +613,13 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.dungnv.Reminda;
+				PRODUCT_BUNDLE_IDENTIFIER = com.reminda.Reminda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

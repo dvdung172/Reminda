@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct RemindaApp: App {
+    @StateObject private var router = Router()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Main()
+                .environmentObject(router)
         }
     }
 }
