@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D90AA1732CB2E36D00401E3A /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1722CB2E36D00401E3A /* CustomTabView.swift */; };
+		D90AA1752CB2E55100401E3A /* CustomTabView+Additional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1742CB2E55100401E3A /* CustomTabView+Additional.swift */; };
 		D9D210AD2CA9A0BA00EB6A4C /* RemindaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */; };
-		D9D210AF2CA9A0BA00EB6A4C /* Splash.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AE2CA9A0BA00EB6A4C /* Splash.swift */; };
+		D9D210AF2CA9A0BA00EB6A4C /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AE2CA9A0BA00EB6A4C /* LaunchView.swift */; };
 		D9D210B12CA9A0BC00EB6A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D210B02CA9A0BC00EB6A4C /* Assets.xcassets */; };
 		D9D210B42CA9A0BC00EB6A4C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D210B32CA9A0BC00EB6A4C /* Preview Assets.xcassets */; };
 		D9D210BE2CA9A0BD00EB6A4C /* RemindaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210BD2CA9A0BD00EB6A4C /* RemindaTests.swift */; };
@@ -44,9 +46,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D90AA1722CB2E36D00401E3A /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		D90AA1742CB2E55100401E3A /* CustomTabView+Additional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CustomTabView+Additional.swift"; sourceTree = "<group>"; };
 		D9D210A92CA9A0BA00EB6A4C /* Reminda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindaApp.swift; sourceTree = "<group>"; };
-		D9D210AE2CA9A0BA00EB6A4C /* Splash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Splash.swift; sourceTree = "<group>"; };
+		D9D210AE2CA9A0BA00EB6A4C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		D9D210B02CA9A0BC00EB6A4C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9D210B32CA9A0BC00EB6A4C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D9D210B92CA9A0BD00EB6A4C /* RemindaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemindaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,7 +162,7 @@
 				D9D210F22CAEEDA900EB6A4C /* NavBar.swift */,
 				D9D210F72CAEF0A800EB6A4C /* Components */,
 				D9D210E92CAE48E800EB6A4C /* Home */,
-				D9D210DE2CAC442800EB6A4C /* Splash */,
+				D9D210DE2CAC442800EB6A4C /* LaunchScreen */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -221,12 +225,12 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		D9D210DE2CAC442800EB6A4C /* Splash */ = {
+		D9D210DE2CAC442800EB6A4C /* LaunchScreen */ = {
 			isa = PBXGroup;
 			children = (
-				D9D210AE2CA9A0BA00EB6A4C /* Splash.swift */,
+				D9D210AE2CA9A0BA00EB6A4C /* LaunchView.swift */,
 			);
-			path = Splash;
+			path = LaunchScreen;
 			sourceTree = "<group>";
 		};
 		D9D210E32CAE3E1B00EB6A4C /* ViewExtensions */ = {
@@ -266,6 +270,8 @@
 			isa = PBXGroup;
 			children = (
 				D9D210F52CAEF09C00EB6A4C /* CircleButtonView.swift */,
+				D90AA1722CB2E36D00401E3A /* CustomTabView.swift */,
+				D90AA1742CB2E55100401E3A /* CustomTabView+Additional.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -404,8 +410,10 @@
 				D9D210E02CAD93E500EB6A4C /* Main.swift in Sources */,
 				D9D210F62CAEF09C00EB6A4C /* CircleButtonView.swift in Sources */,
 				D9D210E82CAE3F6400EB6A4C /* ViewExtension+Preview.swift in Sources */,
+				D90AA1752CB2E55100401E3A /* CustomTabView+Additional.swift in Sources */,
 				D9D210E22CADAA9700EB6A4C /* Routes.swift in Sources */,
-				D9D210AF2CA9A0BA00EB6A4C /* Splash.swift in Sources */,
+				D90AA1732CB2E36D00401E3A /* CustomTabView.swift in Sources */,
+				D9D210AF2CA9A0BA00EB6A4C /* LaunchView.swift in Sources */,
 				D9D210F32CAEEDA900EB6A4C /* NavBar.swift in Sources */,
 				D9D210E62CAE3EA100EB6A4C /* PreviewModifier.swift in Sources */,
 				D9D210AD2CA9A0BA00EB6A4C /* RemindaApp.swift in Sources */,

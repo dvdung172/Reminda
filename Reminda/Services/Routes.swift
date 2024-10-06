@@ -19,6 +19,7 @@ enum Routes: Hashable, Equatable {
     case Detail
     case Profile
     case Setting
+    case Home
     case none
     
     public static func == (lhs: Routes, rhs: Routes) -> Bool {
@@ -26,6 +27,7 @@ enum Routes: Hashable, Equatable {
         case (.Detail, .Detail),
             (.Profile, .Profile),
             (.Setting, .Setting),
+            (.Home, .Home),
             (.none, .none):
             return true
             

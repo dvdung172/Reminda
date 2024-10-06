@@ -16,21 +16,23 @@ struct Home: View {
     @State private var fontSize = 12.0
     
     var body: some View {
-        NavigationView {
-            VStack {
-                Image(systemName: "note.text")
-                    .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Reminda!")
-                    .onTapGesture {
-                        router.navigateTo(.Detail)
-                    }
-            }
-//            .padding()
-            .background(.red)
+        VStack {
+            Image(systemName: "note.text")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Reminda!")
+                .onTapGesture {
+                    router.navigateTo(.Detail)
+                }
         }
-//        .navigationTitle("Notes")
-//        .ignoresSafeArea()
+        .fillDeviceScreen()
+        .navigationTitle("Notes")
+        .toolbarBackground(.hidden, for: .navigationBar)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Image(systemName: "line.3.horizontal")
+            }
+        }
     }
 }
 

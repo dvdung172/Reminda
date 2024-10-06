@@ -11,26 +11,25 @@ struct Main: View {
     @EnvironmentObject private var router: Router
     
     var body: some View {
-        VStack(spacing: 0) {
-            NavBar()
-            NavigationStack(path: $router.navigationPath) {
-                Home()
-                    .navigationDestination(for: Routes.self) { screen in
-                        Group {
-                            switch screen {
-                            case .Detail:
-                                Home()
-                            case .Profile:
-                                Home()
-                            case .Setting:
-                                Home()
-                            case .none:
-                                EmptyView()
-                            }
+        NavigationStack(path: $router.navigationPath) {
+            Home()
+                .navigationDestination(for: Routes.self) { screen in
+                    Group {
+                        switch screen {
+                        case .Detail:
+                            Text("ok")
+                        case .Profile:
+                            Home()
+                        case .Setting:
+                            Home()
+                        case .none:
+                            EmptyView()
+                        case .Home:
+                            Home()
                         }
-                        .navigationBarBackButtonHidden()
                     }
-            }
+//                    .navigationBarBackButtonHidden()
+                }
         }
     }
 }

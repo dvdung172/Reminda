@@ -11,10 +11,27 @@ import SwiftUI
 struct RemindaApp: App {
     @StateObject private var router = Router()
     
+    @State private var showLaunchView: Bool = true
+    
+    init() {
+        UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor : UIColor(Color.theme.foreground)]
+        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor(Color.theme.foreground)]
+        UINavigationBar.appearance().tintColor = UIColor(Color.theme.foreground)
+        UITableView.appearance().backgroundColor = UIColor.clear
+    }
+    
     var body: some Scene {
         WindowGroup {
-            Main()
-                .environmentObject(router)
+            VStack {
+                if showLaunchView {
+                    LaunchView(showLaunchView: $showLaunchView)
+                } else {
+                    Main()
+                }
+            }
+            .environmentObject(router)
+//            .environment(\.colorScheme, .dark)
+            
         }
     }
 }

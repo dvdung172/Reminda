@@ -11,7 +11,10 @@ struct PreviewModifier: ViewModifier {
     @State private var router = Router()
     
     func body(content: Content) -> some View {
+        NavigationView{
             content
+        }
+            
             .environmentObject(router)
         }
 }
