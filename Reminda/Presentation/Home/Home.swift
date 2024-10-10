@@ -15,17 +15,27 @@ struct Home: View {
     @State private var italic = false
     @State private var fontSize = 12.0
     
+    @State private var selection: Category
+
+    //mock
+    let tabStack = [Category(id: 0, title: "tab1", icon: nil), Category(id: 1, title: "tab2", icon: nil)]
+    
+    init() {
+        self.selection = tabStack[0]
+    }
+    
     var body: some View {
-        VStack {
-            Image(systemName: "note.text")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Reminda!")
-                .onTapGesture {
-                    router.navigateTo(.Detail)
+        VStack(spacing: 10){
+            HomeTabList(tabs: tabStack, selection: $selection)
+            TabView(selection: $selection) {
+                ForEach(tabStack, id:  \.self) { content in
+                    HomeMemoGridView()
                 }
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
         }
-        .fillDeviceScreen()
+        .fillParentSize()
+        .padding()
         .navigationTitle("Notes")
         .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
@@ -33,6 +43,7 @@ struct Home: View {
                 Image(systemName: "line.3.horizontal")
             }
         }
+        .edgesIgnoringSafeArea(.bottom)
     }
 }
 

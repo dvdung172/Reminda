@@ -14,7 +14,6 @@ struct PreviewModifier: ViewModifier {
         NavigationView{
             content
         }
-            
             .environmentObject(router)
         }
 }
