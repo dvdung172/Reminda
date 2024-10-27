@@ -18,7 +18,7 @@ struct Home: View {
     @State private var selection: Category
 
     //mock
-    let tabStack = [Category(id: 0, title: "tab1", icon: nil), Category(id: 1, title: "tab2", icon: nil)]
+    let tabStack = [Category(id: "0", title: "tab1", icon: nil), Category(id: "1", title: "tab2", icon: nil)]
     
     init() {
         self.selection = tabStack[0]

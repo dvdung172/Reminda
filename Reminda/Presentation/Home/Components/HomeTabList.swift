@@ -26,7 +26,7 @@ struct HomeTabList: View {
     
     /// Tab button
     @ViewBuilder private func tabButton(tab: Category) -> some View {
-        Text(tab.title ?? "")
+        Text(tab.title)
             .padding()
             .frame(minWidth: 70)
             .foregroundColor(.white)
@@ -39,8 +39,8 @@ struct HomeTabList: View {
 }
 
 #Preview {
-    @State var selection = Category(id: 0, title: "tab1", icon: nil)
-    let tabStack = [Category(id: 0, title: "tab1", icon: nil), Category(id: 1, title: "tab2", icon: nil)]
+    @State var selection = Category(id: "0", title: "tab1", icon: nil)
+    let tabStack = [Category(id: "0", title: "tab1", icon: nil), Category(id: "1", title: "tab2", icon: nil)]
     return HomeTabList(tabs: tabStack, selection: $selection)
 }
 

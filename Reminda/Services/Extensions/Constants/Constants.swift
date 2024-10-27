@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 
+@MainActor
 struct UIConstants {
     
     private init() {}

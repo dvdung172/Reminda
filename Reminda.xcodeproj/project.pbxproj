@@ -12,6 +12,10 @@
 		D90AA1822CB590D400401E3A /* HomeTabList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1812CB590D400401E3A /* HomeTabList.swift */; };
 		D90AA1862CB6D64B00401E3A /* HomeMemoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1852CB6D64B00401E3A /* HomeMemoItem.swift */; };
 		D90AA1892CB6D69500401E3A /* HomeMemoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1882CB6D69500401E3A /* HomeMemoGridView.swift */; };
+		D90AA18F2CBD71DD00401E3A /* RCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA18E2CBD71DD00401E3A /* RCategory.swift */; };
+		D90AA1922CBD733700401E3A /* RCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1912CBD733700401E3A /* RCategoryRepository.swift */; };
+		D90AA1942CCA2F2600401E3A /* RealmSuppoters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1932CCA2F2600401E3A /* RealmSuppoters.swift */; };
+		D90AA1962CCA2F7D00401E3A /* Home+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1952CCA2F7D00401E3A /* Home+ViewModel.swift */; };
 		D9D210AD2CA9A0BA00EB6A4C /* RemindaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */; };
 		D9D210AF2CA9A0BA00EB6A4C /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AE2CA9A0BA00EB6A4C /* LaunchView.swift */; };
 		D9D210B12CA9A0BC00EB6A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D210B02CA9A0BC00EB6A4C /* Assets.xcassets */; };
@@ -54,6 +58,10 @@
 		D90AA1812CB590D400401E3A /* HomeTabList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabList.swift; sourceTree = "<group>"; };
 		D90AA1852CB6D64B00401E3A /* HomeMemoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMemoItem.swift; sourceTree = "<group>"; };
 		D90AA1882CB6D69500401E3A /* HomeMemoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMemoGridView.swift; sourceTree = "<group>"; };
+		D90AA18E2CBD71DD00401E3A /* RCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCategory.swift; sourceTree = "<group>"; };
+		D90AA1912CBD733700401E3A /* RCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCategoryRepository.swift; sourceTree = "<group>"; };
+		D90AA1932CCA2F2600401E3A /* RealmSuppoters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RealmSuppoters.swift; path = Repositories/RealmSuppoters.swift; sourceTree = "<group>"; };
+		D90AA1952CCA2F7D00401E3A /* Home+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+ViewModel.swift"; sourceTree = "<group>"; };
 		D9D210A92CA9A0BA00EB6A4C /* Reminda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindaApp.swift; sourceTree = "<group>"; };
 		D9D210AE2CA9A0BA00EB6A4C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -101,6 +109,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3B9E785FD457F43B2CF77BF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D90AA1782CB433A400401E3A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +142,32 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		D90AA18A2CB82DA900401E3A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				D90AA1912CBD733700401E3A /* RCategoryRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		D90AA18B2CBD71AA00401E3A /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				D90AA1932CCA2F2600401E3A /* RealmSuppoters.swift */,
+				D90AA18A2CB82DA900401E3A /* Repositories */,
+				D90AA18C2CBD71B400401E3A /* Models */,
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
+		D90AA18C2CBD71B400401E3A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D90AA18E2CBD71DD00401E3A /* RCategory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D9D210A02CA9A0BA00EB6A4C = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +175,7 @@
 				D9D210BC2CA9A0BD00EB6A4C /* RemindaTests */,
 				D9D210C62CA9A0BD00EB6A4C /* RemindaUITests */,
 				D9D210AA2CA9A0BA00EB6A4C /* Products */,
+				3B9E785FD457F43B2CF77BF6 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +262,7 @@
 		D9D210D92CA9A3A700EB6A4C /* Datas */ = {
 			isa = PBXGroup;
 			children = (
+				D90AA18B2CBD71AA00401E3A /* Realm */,
 				D9D210DD2CA9A52D00EB6A4C /* Network */,
 			);
 			path = Datas;
@@ -289,6 +332,7 @@
 			children = (
 				D90AA17C2CB43AF000401E3A /* Components */,
 				D9D210EA2CAE48F600EB6A4C /* Home.swift */,
+				D90AA1952CCA2F7D00401E3A /* Home+ViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -443,6 +487,8 @@
 				D9D210ED2CAEE95E00EB6A4C /* ViewExtension+Dimens.swift in Sources */,
 				D9D210E02CAD93E500EB6A4C /* Main.swift in Sources */,
 				D90AA1862CB6D64B00401E3A /* HomeMemoItem.swift in Sources */,
+				D90AA1922CBD733700401E3A /* RCategoryRepository.swift in Sources */,
+				D90AA1942CCA2F2600401E3A /* RealmSuppoters.swift in Sources */,
 				D9D210F62CAEF09C00EB6A4C /* CircleButtonView.swift in Sources */,
 				D9D210E82CAE3F6400EB6A4C /* ViewExtension+Preview.swift in Sources */,
 				D9D210E22CADAA9700EB6A4C /* Routes.swift in Sources */,
@@ -451,7 +497,9 @@
 				D90AA1822CB590D400401E3A /* HomeTabList.swift in Sources */,
 				D9D210F32CAEEDA900EB6A4C /* NavBar.swift in Sources */,
 				D9D210E62CAE3EA100EB6A4C /* PreviewModifier.swift in Sources */,
+				D90AA1962CCA2F7D00401E3A /* Home+ViewModel.swift in Sources */,
 				D9D210AD2CA9A0BA00EB6A4C /* RemindaApp.swift in Sources */,
+				D90AA18F2CBD71DD00401E3A /* RCategory.swift in Sources */,
 				D9D210EB2CAE48F600EB6A4C /* Home.swift in Sources */,
 				D90AA1892CB6D69500401E3A /* HomeMemoGridView.swift in Sources */,
 				D9D210F02CAEE98E00EB6A4C /* Constants.swift in Sources */,
@@ -621,6 +669,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Reminda/Preview Content\"";
 				DEVELOPMENT_TEAM = 23UT633YD5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -633,9 +682,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reminda.Reminda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -651,6 +702,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Reminda/Preview Content\"";
 				DEVELOPMENT_TEAM = 23UT633YD5;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -663,9 +715,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_SWIFT_FLAGS = "$(inherited) -D COCOAPODS";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reminda.Reminda;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

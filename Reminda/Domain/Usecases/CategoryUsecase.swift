@@ -9,5 +9,10 @@ import Foundation
 import Combine
 
 protocol CategoryUsecase {
-    func getPhoto(searchTerm: String, pageSize: Int)
-}
+//    func insertCategory(category: Category)
+//    func getCategory(id: String) -> Category?
+//    func getCategory() -> [Category]
+//    func updateCategory(id: String)
+//    func deleteCategory(id: String)
+//    func deleteAllCategory()
+//}
