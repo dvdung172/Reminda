@@ -14,7 +14,7 @@ struct RealmError: Error {
 }
 
 struct RealmPersistent {
-    static func initializer() -> Realm {
+    static func initializer() -> Realm? {
         do {
             let realm = try Realm()
             return realm

@@ -6,17 +6,29 @@
 //
 
 import Foundation
-import Combine
+import RxSwift
 
-class ViewModel: ObservableObject {
+class HomeViewModel: ObservableObject {
     
     // MARK: Output
-    @Published var categories : [Category]
+    @Published private(set) var categories : [Category]
     
-//    private var disposables = Set<AnyCancellable>()
+    private let disposeBag = DisposeBag()
     private var categoryRepository: CategoryUsecase = RCategoryRepository.shared
-
-    init(){
+    
+    init(categories: [Category]) {
+        self.categories = []
+    }
+    
+    func getListCategories() {
         categoryRepository
-        }
+            .getListCategories()
+            .asObservable()
+            .subscribe { [weak self] categories in
+                self?.categories = categories
+            } onError: { [weak self] error in
+                print("\(error)")
+            }
+            .disposed(by: disposeBag)
+    }
 }

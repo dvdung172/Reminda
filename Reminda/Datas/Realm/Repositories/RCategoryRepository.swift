@@ -15,71 +15,118 @@ struct RCategoryRepository: CategoryUsecase {
     
     private let realm = RealmPersistent.initializer()
     
-    func insertCategory(category: Category) {
-        do {
-            let r_category = RCategory()
-            r_category.fromCategory(category: category)
-            
-            try realm.write {
-                realm.add(r_category)
-            }
-        } catch {
-            print("An error occurred while saving the category: \(error)")
-        }
-    }
-    
-    func getCategory(id: String) -> Category? {
-        
-        let categories = realm.objects(RCategory.self)
-        // Get specific category by id
-        if let category = categories.first(where: { $0.id == id }) {
-            return category.toCategory()
-        }
-        return nil
-    }
-    
-    func getCategory() -> [Category] {
-        let categories = realm.objects(RCategory.self)
-        
-        return categories.map {$0.toCategory()}
-    }
-    
-    func updateCategory(id: String, title: String, icon: String?, index: Int? ) {
-        do {
-            let category = realm.objects(RCategory.self).first(where: { $0.id == id})
-            
-            try realm.write {
-                category?.title = title
-                category?.icon = icon
-                category?.index = index
-            }
-        } catch {
-            print("An error occurred while saving the category: \(error)")
-        }
-    }
-    
-    func deleteCategory(id: String) {
-        do {
-            let categories = realm.objects(RCategory.self)
-            // Get specific category by id
-            if let category = categories.first(where: { $0.id == id }) {
-                try realm.write {
-                    realm.delete(category)
+    func insertCategory(category: Category) -> Completable {
+        return Completable.create { observer in
+            let maybeError = RealmError(msg: "An error occurred while saving the category")
+
+            do {
+                let r_category = RCategory()
+                r_category.fromCategory(category: category)
+                
+                try realm?.write {
+                    realm?.add(r_category)
+                    
+                    observer(.completed)
                 }
+            } catch {
+                observer(.error(maybeError))
             }
-        } catch {
-            print("An error occurred while deleting the category: \(error)")
+            
+            return Disposables.create()
         }
     }
     
-    func deleteAllCategory() {
-        do {
-            let categories = realm.objects(RCategory.self)
-            try realm.write {
-                realm.delete(categories)
+    func getCategory(id: String) -> Single<Category> {
+        return Single<Category>.create { observer in
+            let maybeError = RealmError(msg: "An error occurred while fetching the category")
+            
+            if let category = realm?.objects(RCategory.self).first(where: { $0.id == id }) {
+                observer(.success(category.toCategory()))
+            } else {
+                observer(.failure(maybeError))
             }
-        } catch {
-            print("An error occurred while deleting all category: \(error)")
+            
+            return Disposables.create()
+        }
+    }
+    
+    func getListCategories() -> Single<[Category]> {
+        return Single<[Category]>.create { observer in
+            let maybeError = RealmError(msg: "An error occurred while fetching the categories")
+            
+            if let categories = realm?.objects(RCategory.self) {
+                let usersArray: [Category] = categories.map {$0.toCategory()}
+                observer(.success(usersArray))
+            } else {
+                observer(.failure(maybeError))
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func updateCategory(id: String, title: String, icon: String?, index: Int? ) -> Completable {
+        return Completable.create { observer in
+            let maybeError = RealmError(msg: "An error occurred while saving the category")
+
+            do {
+                let category = realm?.objects(RCategory.self).first(where: { $0.id == id})
+                
+                try realm?.write {
+                    category?.title = title
+                    category?.icon = icon
+                    category?.index = index
+                    
+                    observer(.completed)
+                }
+            } catch {
+                observer(.error(maybeError))
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func deleteCategory(id: String)  -> Completable {
+        return Completable.create { observer in
+            let maybeError = RealmError(msg: "An error occurred while deleting the category")
+            
+            do {
+                let categories = realm?.objects(RCategory.self)
+                // Get specific category by id
+                if let category = categories?.first(where: { $0.id == id }) {
+                    try realm?.write {
+                        realm?.delete(category)
+                        observer(.completed)
+                    }
+                }
+            } catch {
+                observer(.error(maybeError))
+            }
+            
+            return Disposables.create()
+        }
+    }
+    
+    func deleteAllCategory() -> Completable {
+        return Completable.create { observer in
+            let maybeError = RealmError(msg: "An error occurred while deleting all category")
+            
+            do {
+                if let categories = realm?.objects(RCategory.self) {
+                    try realm?.write {
+                        realm?.delete(categories)
+                        
+                        observer(.completed)
+                        return
+                    }
+                }
+                
+            } catch {
+                observer(.error(maybeError))
+            }
+            
+            return Disposables.create()
         }
     }
 }

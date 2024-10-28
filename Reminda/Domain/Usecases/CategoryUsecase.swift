@@ -6,13 +6,13 @@
 //
 
 import Foundation
-import Combine
+import RxSwift
 
 protocol CategoryUsecase {
-//    func insertCategory(category: Category)
-//    func getCategory(id: String) -> Category?
-//    func getCategory() -> [Category]
-//    func updateCategory(id: String)
-//    func deleteCategory(id: String)
-//    func deleteAllCategory()
-//}
+    func insertCategory(category: Category) -> Completable
+    func getCategory(id: String) -> Single<Category>
+    func getListCategories() -> Single<[Category]>
+    func updateCategory(id: String, title: String, icon: String?, index: Int? ) -> Completable
+    func deleteCategory(id: String)  -> Completable
+    func deleteAllCategory() -> Completable
+}
