@@ -14,7 +14,11 @@ struct PreviewModifier: ViewModifier {
         NavigationView{
             content
         }
-            .environmentObject(router)
-        }
+        .environmentObject(router)
+    }
 }
 
+#Preview {
+    Text("PreviewModifier")
+        .modifier(PreviewModifier())
+}

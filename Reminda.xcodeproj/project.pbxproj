@@ -7,15 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46D4C0705343AE89E10100B8 /* Pods_Reminda_RemindaUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0CEB5C1A749FAD7F6355940 /* Pods_Reminda_RemindaUITests.framework */; };
+		8AED9ECE405C86A311686F21 /* Pods_RemindaTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E4724A5172FFCCE2AA8FAF7 /* Pods_RemindaTests.framework */; };
+		CAEFB748E516BBCF8575D7B0 /* Pods_Reminda.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C45C2C36B2B38250C4EFAFF /* Pods_Reminda.framework */; };
 		D90AA1772CB4339D00401E3A /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1762CB4339D00401E3A /* Category.swift */; };
 		D90AA17B2CB4348C00401E3A /* CategoryUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA17A2CB4348C00401E3A /* CategoryUsecase.swift */; };
 		D90AA1822CB590D400401E3A /* HomeTabList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1812CB590D400401E3A /* HomeTabList.swift */; };
 		D90AA1862CB6D64B00401E3A /* HomeMemoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1852CB6D64B00401E3A /* HomeMemoItem.swift */; };
 		D90AA1892CB6D69500401E3A /* HomeMemoGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1882CB6D69500401E3A /* HomeMemoGridView.swift */; };
-		D90AA18F2CBD71DD00401E3A /* RCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA18E2CBD71DD00401E3A /* RCategory.swift */; };
-		D90AA1922CBD733700401E3A /* RCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1912CBD733700401E3A /* RCategoryRepository.swift */; };
+		D90AA18F2CBD71DD00401E3A /* R_Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA18E2CBD71DD00401E3A /* R_Category.swift */; };
+		D90AA1922CBD733700401E3A /* R_Category_Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1912CBD733700401E3A /* R_Category_Repository.swift */; };
 		D90AA1942CCA2F2600401E3A /* RealmSuppoters.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1932CCA2F2600401E3A /* RealmSuppoters.swift */; };
 		D90AA1962CCA2F7D00401E3A /* Home+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1952CCA2F7D00401E3A /* Home+ViewModel.swift */; };
+		D90AA1992CD2CA5700401E3A /* MemoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1982CD2CA5700401E3A /* MemoItem.swift */; };
+		D90AA19B2CD3B6C500401E3A /* MemoItemUsecase.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA19A2CD3B6C500401E3A /* MemoItemUsecase.swift */; };
+		D90AA19D2CD3B72400401E3A /* R_MemoItem_Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA19C2CD3B72400401E3A /* R_MemoItem_Repository.swift */; };
+		D90AA19F2CD3B7B100401E3A /* R_MemoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA19E2CD3B7B100401E3A /* R_MemoItem.swift */; };
+		D90AA1A12CD4DC2700401E3A /* Remida_NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1A02CD4DC2700401E3A /* Remida_NavigationBarModifier.swift */; };
 		D9D210AD2CA9A0BA00EB6A4C /* RemindaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */; };
 		D9D210AF2CA9A0BA00EB6A4C /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AE2CA9A0BA00EB6A4C /* LaunchView.swift */; };
 		D9D210B12CA9A0BC00EB6A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D210B02CA9A0BC00EB6A4C /* Assets.xcassets */; };
@@ -53,15 +61,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0399286799A7E44A2E4DD7E1 /* Pods-Reminda-RemindaUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminda-RemindaUITests.release.xcconfig"; path = "Target Support Files/Pods-Reminda-RemindaUITests/Pods-Reminda-RemindaUITests.release.xcconfig"; sourceTree = "<group>"; };
+		093BBDA9D77BACE88B66EDB0 /* Pods-Reminda-RemindaUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminda-RemindaUITests.debug.xcconfig"; path = "Target Support Files/Pods-Reminda-RemindaUITests/Pods-Reminda-RemindaUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		0C45C2C36B2B38250C4EFAFF /* Pods_Reminda.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reminda.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		407AFE98DD494C2627E43F4C /* Pods-Reminda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminda.release.xcconfig"; path = "Target Support Files/Pods-Reminda/Pods-Reminda.release.xcconfig"; sourceTree = "<group>"; };
+		92734EA30F3964E8F755D474 /* Pods-Reminda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reminda.debug.xcconfig"; path = "Target Support Files/Pods-Reminda/Pods-Reminda.debug.xcconfig"; sourceTree = "<group>"; };
+		9E4724A5172FFCCE2AA8FAF7 /* Pods_RemindaTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RemindaTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0CEB5C1A749FAD7F6355940 /* Pods_Reminda_RemindaUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reminda_RemindaUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBF87B8527C749ADA249D129 /* Pods-RemindaTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemindaTests.release.xcconfig"; path = "Target Support Files/Pods-RemindaTests/Pods-RemindaTests.release.xcconfig"; sourceTree = "<group>"; };
 		D90AA1762CB4339D00401E3A /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D90AA17A2CB4348C00401E3A /* CategoryUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryUsecase.swift; sourceTree = "<group>"; };
 		D90AA1812CB590D400401E3A /* HomeTabList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabList.swift; sourceTree = "<group>"; };
 		D90AA1852CB6D64B00401E3A /* HomeMemoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMemoItem.swift; sourceTree = "<group>"; };
 		D90AA1882CB6D69500401E3A /* HomeMemoGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeMemoGridView.swift; sourceTree = "<group>"; };
-		D90AA18E2CBD71DD00401E3A /* RCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCategory.swift; sourceTree = "<group>"; };
-		D90AA1912CBD733700401E3A /* RCategoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCategoryRepository.swift; sourceTree = "<group>"; };
+		D90AA18E2CBD71DD00401E3A /* R_Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R_Category.swift; sourceTree = "<group>"; };
+		D90AA1912CBD733700401E3A /* R_Category_Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R_Category_Repository.swift; sourceTree = "<group>"; };
 		D90AA1932CCA2F2600401E3A /* RealmSuppoters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RealmSuppoters.swift; path = Repositories/RealmSuppoters.swift; sourceTree = "<group>"; };
 		D90AA1952CCA2F7D00401E3A /* Home+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Home+ViewModel.swift"; sourceTree = "<group>"; };
+		D90AA1982CD2CA5700401E3A /* MemoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoItem.swift; sourceTree = "<group>"; };
+		D90AA19A2CD3B6C500401E3A /* MemoItemUsecase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoItemUsecase.swift; sourceTree = "<group>"; };
+		D90AA19C2CD3B72400401E3A /* R_MemoItem_Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R_MemoItem_Repository.swift; sourceTree = "<group>"; };
+		D90AA19E2CD3B7B100401E3A /* R_MemoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = R_MemoItem.swift; sourceTree = "<group>"; };
+		D90AA1A02CD4DC2700401E3A /* Remida_NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remida_NavigationBarModifier.swift; sourceTree = "<group>"; };
 		D9D210A92CA9A0BA00EB6A4C /* Reminda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindaApp.swift; sourceTree = "<group>"; };
 		D9D210AE2CA9A0BA00EB6A4C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -82,6 +103,7 @@
 		D9D210F22CAEEDA900EB6A4C /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
 		D9D210F52CAEF09C00EB6A4C /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
 		D9D210F82CAEF12100EB6A4C /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		E13EA3BA5956CBBB5F734EA0 /* Pods-RemindaTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RemindaTests.debug.xcconfig"; path = "Target Support Files/Pods-RemindaTests/Pods-RemindaTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAEFB748E516BBCF8575D7B0 /* Pods_Reminda.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AED9ECE405C86A311686F21 /* Pods_RemindaTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46D4C0705343AE89E10100B8 /* Pods_Reminda_RemindaUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,14 +137,31 @@
 		3B9E785FD457F43B2CF77BF6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
+				92734EA30F3964E8F755D474 /* Pods-Reminda.debug.xcconfig */,
+				407AFE98DD494C2627E43F4C /* Pods-Reminda.release.xcconfig */,
+				093BBDA9D77BACE88B66EDB0 /* Pods-Reminda-RemindaUITests.debug.xcconfig */,
+				0399286799A7E44A2E4DD7E1 /* Pods-Reminda-RemindaUITests.release.xcconfig */,
+				E13EA3BA5956CBBB5F734EA0 /* Pods-RemindaTests.debug.xcconfig */,
+				CBF87B8527C749ADA249D129 /* Pods-RemindaTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		935986F275CC01D36B9F6D4F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0C45C2C36B2B38250C4EFAFF /* Pods_Reminda.framework */,
+				B0CEB5C1A749FAD7F6355940 /* Pods_Reminda_RemindaUITests.framework */,
+				9E4724A5172FFCCE2AA8FAF7 /* Pods_RemindaTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		D90AA1782CB433A400401E3A /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				D90AA1762CB4339D00401E3A /* Category.swift */,
+				D90AA1982CD2CA5700401E3A /* MemoItem.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -128,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				D90AA17A2CB4348C00401E3A /* CategoryUsecase.swift */,
+				D90AA19A2CD3B6C500401E3A /* MemoItemUsecase.swift */,
 			);
 			path = Usecases;
 			sourceTree = "<group>";
@@ -145,7 +188,8 @@
 		D90AA18A2CB82DA900401E3A /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
-				D90AA1912CBD733700401E3A /* RCategoryRepository.swift */,
+				D90AA1912CBD733700401E3A /* R_Category_Repository.swift */,
+				D90AA19C2CD3B72400401E3A /* R_MemoItem_Repository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -154,8 +198,8 @@
 			isa = PBXGroup;
 			children = (
 				D90AA1932CCA2F2600401E3A /* RealmSuppoters.swift */,
-				D90AA18A2CB82DA900401E3A /* Repositories */,
 				D90AA18C2CBD71B400401E3A /* Models */,
+				D90AA18A2CB82DA900401E3A /* Repositories */,
 			);
 			path = Realm;
 			sourceTree = "<group>";
@@ -163,7 +207,8 @@
 		D90AA18C2CBD71B400401E3A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D90AA18E2CBD71DD00401E3A /* RCategory.swift */,
+				D90AA18E2CBD71DD00401E3A /* R_Category.swift */,
+				D90AA19E2CD3B7B100401E3A /* R_MemoItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,6 +221,7 @@
 				D9D210C62CA9A0BD00EB6A4C /* RemindaUITests */,
 				D9D210AA2CA9A0BA00EB6A4C /* Products */,
 				3B9E785FD457F43B2CF77BF6 /* Pods */,
+				935986F275CC01D36B9F6D4F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -323,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				D9D210E52CAE3EA100EB6A4C /* PreviewModifier.swift */,
+				D90AA1A02CD4DC2700401E3A /* Remida_NavigationBarModifier.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -360,9 +407,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9D210CD2CA9A0BD00EB6A4C /* Build configuration list for PBXNativeTarget "Reminda" */;
 			buildPhases = (
+				554C1636DFD99DEE0A33B0A1 /* [CP] Check Pods Manifest.lock */,
 				D9D210A52CA9A0BA00EB6A4C /* Sources */,
 				D9D210A62CA9A0BA00EB6A4C /* Frameworks */,
 				D9D210A72CA9A0BA00EB6A4C /* Resources */,
+				98DFC1B9B5BEA72BB94353E4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,6 +426,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9D210D02CA9A0BD00EB6A4C /* Build configuration list for PBXNativeTarget "RemindaTests" */;
 			buildPhases = (
+				0088E906FF0752DA75B105DF /* [CP] Check Pods Manifest.lock */,
 				D9D210B52CA9A0BD00EB6A4C /* Sources */,
 				D9D210B62CA9A0BD00EB6A4C /* Frameworks */,
 				D9D210B72CA9A0BD00EB6A4C /* Resources */,
@@ -395,9 +445,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9D210D32CA9A0BD00EB6A4C /* Build configuration list for PBXNativeTarget "RemindaUITests" */;
 			buildPhases = (
+				F546B471191C28F6B50BC35E /* [CP] Check Pods Manifest.lock */,
 				D9D210BF2CA9A0BD00EB6A4C /* Sources */,
 				D9D210C02CA9A0BD00EB6A4C /* Frameworks */,
 				D9D210C12CA9A0BD00EB6A4C /* Resources */,
+				E2EA4D2EB43458AE968B2AF4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -478,6 +530,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0088E906FF0752DA75B105DF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RemindaTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		554C1636DFD99DEE0A33B0A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reminda-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98DFC1B9B5BEA72BB94353E4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reminda/Pods-Reminda-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reminda/Pods-Reminda-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reminda/Pods-Reminda-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2EA4D2EB43458AE968B2AF4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reminda-RemindaUITests/Pods-Reminda-RemindaUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Reminda-RemindaUITests/Pods-Reminda-RemindaUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Reminda-RemindaUITests/Pods-Reminda-RemindaUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F546B471191C28F6B50BC35E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Reminda-RemindaUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D9D210A52CA9A0BA00EB6A4C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -487,20 +642,25 @@
 				D9D210ED2CAEE95E00EB6A4C /* ViewExtension+Dimens.swift in Sources */,
 				D9D210E02CAD93E500EB6A4C /* Main.swift in Sources */,
 				D90AA1862CB6D64B00401E3A /* HomeMemoItem.swift in Sources */,
-				D90AA1922CBD733700401E3A /* RCategoryRepository.swift in Sources */,
+				D90AA1922CBD733700401E3A /* R_Category_Repository.swift in Sources */,
 				D90AA1942CCA2F2600401E3A /* RealmSuppoters.swift in Sources */,
+				D90AA1992CD2CA5700401E3A /* MemoItem.swift in Sources */,
 				D9D210F62CAEF09C00EB6A4C /* CircleButtonView.swift in Sources */,
 				D9D210E82CAE3F6400EB6A4C /* ViewExtension+Preview.swift in Sources */,
 				D9D210E22CADAA9700EB6A4C /* Routes.swift in Sources */,
 				D90AA17B2CB4348C00401E3A /* CategoryUsecase.swift in Sources */,
+				D90AA19D2CD3B72400401E3A /* R_MemoItem_Repository.swift in Sources */,
 				D9D210AF2CA9A0BA00EB6A4C /* LaunchView.swift in Sources */,
 				D90AA1822CB590D400401E3A /* HomeTabList.swift in Sources */,
 				D9D210F32CAEEDA900EB6A4C /* NavBar.swift in Sources */,
 				D9D210E62CAE3EA100EB6A4C /* PreviewModifier.swift in Sources */,
+				D90AA1A12CD4DC2700401E3A /* Remida_NavigationBarModifier.swift in Sources */,
 				D90AA1962CCA2F7D00401E3A /* Home+ViewModel.swift in Sources */,
 				D9D210AD2CA9A0BA00EB6A4C /* RemindaApp.swift in Sources */,
-				D90AA18F2CBD71DD00401E3A /* RCategory.swift in Sources */,
+				D90AA18F2CBD71DD00401E3A /* R_Category.swift in Sources */,
+				D90AA19F2CD3B7B100401E3A /* R_MemoItem.swift in Sources */,
 				D9D210EB2CAE48F600EB6A4C /* Home.swift in Sources */,
+				D90AA19B2CD3B6C500401E3A /* MemoItemUsecase.swift in Sources */,
 				D90AA1892CB6D69500401E3A /* HomeMemoGridView.swift in Sources */,
 				D9D210F02CAEE98E00EB6A4C /* Constants.swift in Sources */,
 				D9D210F92CAEF12100EB6A4C /* ColorExtensions.swift in Sources */,
@@ -661,6 +821,7 @@
 		};
 		D9D210CE2CA9A0BD00EB6A4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 92734EA30F3964E8F755D474 /* Pods-Reminda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -694,6 +855,7 @@
 		};
 		D9D210CF2CA9A0BD00EB6A4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 407AFE98DD494C2627E43F4C /* Pods-Reminda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -727,6 +889,7 @@
 		};
 		D9D210D12CA9A0BD00EB6A4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E13EA3BA5956CBBB5F734EA0 /* Pods-RemindaTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -747,6 +910,7 @@
 		};
 		D9D210D22CA9A0BD00EB6A4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CBF87B8527C749ADA249D129 /* Pods-RemindaTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -767,6 +931,7 @@
 		};
 		D9D210D42CA9A0BD00EB6A4C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 093BBDA9D77BACE88B66EDB0 /* Pods-Reminda-RemindaUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -785,6 +950,7 @@
 		};
 		D9D210D52CA9A0BD00EB6A4C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0399286799A7E44A2E4DD7E1 /* Pods-Reminda-RemindaUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

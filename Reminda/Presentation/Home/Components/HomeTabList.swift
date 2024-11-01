@@ -9,37 +9,44 @@ import SwiftUI
 
 struct HomeTabList: View {
     var tabs: [Category]
-    @Binding var selection: Category
+    @Binding var selection: Category?
     
     var body: some View {
         ScrollView(.horizontal,showsIndicators: false) {
             HStack(spacing: 10){
-                ForEach(tabs, id:  \.self) { tab in
-                    tabButton(tab: tab)
-                        .onTapGesture {
-                            selection = tab
-                        }
+                if tabs.isEmpty {
+                    EmptyView()
+                } else {
+                    ForEach(tabs, id:  \.self) { tab in
+                        tabButton(tab: tab)
+                            .onTapGesture {
+                                selection = tab
+                            }
+                    }
                 }
             }
+        }
+        .onAppear {
+            selection = tabs[0]
         }
     }
     
     /// Tab button
     @ViewBuilder private func tabButton(tab: Category) -> some View {
         Text(tab.title)
-            .padding()
+            .padding(10)
             .frame(minWidth: 70)
             .foregroundColor(.white)
             .background(Color.blue)
             .clipShape(Capsule())
             .opacity(selection == tab ? 1 : 0.5)
-            .animation(.easeInOut, value: selection) // 2
+            .animation(.easeInOut, value: selection ?? nil) // 2
             .transition(.slide)
     }
 }
 
 #Preview {
-    @State var selection = Category(id: "0", title: "tab1", icon: nil)
+    @State var selection: Category? = Category(id: "0", title: "tab1", icon: nil)
     let tabStack = [Category(id: "0", title: "tab1", icon: nil), Category(id: "1", title: "tab2", icon: nil)]
     return HomeTabList(tabs: tabStack, selection: $selection)
 }

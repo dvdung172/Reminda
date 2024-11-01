@@ -8,7 +8,7 @@
 import Foundation
 
 struct Category: Decodable, Hashable {
-    var id = UUID().uuidString
+    var id: String
     var title: String
     var icon: String?
     var index: Int?

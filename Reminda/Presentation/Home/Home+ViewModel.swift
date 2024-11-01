@@ -11,14 +11,10 @@ import RxSwift
 class HomeViewModel: ObservableObject {
     
     // MARK: Output
-    @Published private(set) var categories : [Category]
+    @Published private(set) var categories : [Category] = []
     
     private let disposeBag = DisposeBag()
     private var categoryRepository: CategoryUsecase = RCategoryRepository.shared
-    
-    init(categories: [Category]) {
-        self.categories = []
-    }
     
     func getListCategories() {
         categoryRepository
@@ -26,7 +22,18 @@ class HomeViewModel: ObservableObject {
             .asObservable()
             .subscribe { [weak self] categories in
                 self?.categories = categories
-            } onError: { [weak self] error in
+            } onError: { error in
+                print("\(error)")
+            }
+            .disposed(by: disposeBag)
+    }
+    func add() {
+        categoryRepository
+            .insertCategory(category: Category(id: UUID().uuidString, title: "memory") )
+            .asObservable()
+            .subscribe { [weak self] categories in
+//                self?.getListCategories()
+            } onError: { error in
                 print("\(error)")
             }
             .disposed(by: disposeBag)

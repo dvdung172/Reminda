@@ -15,28 +15,37 @@ struct Home: View {
     @State private var italic = false
     @State private var fontSize = 12.0
     
-    @State private var selection: Category
-
-    //mock
-    let tabStack = [Category(id: "0", title: "tab1", icon: nil), Category(id: "1", title: "tab2", icon: nil)]
+    @State private var selection: Category?
     
-    init() {
-        self.selection = tabStack[0]
-    }
+    @ObservedObject var vm = HomeViewModel()
+    @State var hideNavigationBar: Bool = false
     
     var body: some View {
         VStack(spacing: 10){
-            HomeTabList(tabs: tabStack, selection: $selection)
-            TabView(selection: $selection) {
-                ForEach(tabStack, id:  \.self) { content in
-                    HomeMemoGridView()
+            if !vm.categories.isEmpty {
+                HomeTabList(tabs: vm.categories, selection: $selection)
+                TabView(selection: $selection) {
+                    ForEach(vm.categories, id:  \.self) { content in
+                        ScrollView(showsIndicators: false) {
+                            HomeMemoGridView()
+                        }
+                    }
                 }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                
             }
-            .tabViewStyle(.page(indexDisplayMode: .never))
+            Text("change")
+                .onTapGesture {
+                    withAnimation(.easeInOut(duration: 31)) {
+                        hideNavigationBar.toggle()
+                    }
+                }
         }
         .fillParentSize()
-        .padding()
-        .navigationTitle("Notes")
+        .padding(.horizontal)
+//        .navigationTitle("Notes")
+        .navigationBarTitle("Hello World", displayMode: hideNavigationBar ? .large : .inline)
+//        .navigationBarTitleDisplayMode(hideNavigationBar ? .large : .inline)
         .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -44,6 +53,9 @@ struct Home: View {
             }
         }
         .edgesIgnoringSafeArea(.bottom)
+        .onAppear {
+            vm.getListCategories()
+        }
     }
 }
 
