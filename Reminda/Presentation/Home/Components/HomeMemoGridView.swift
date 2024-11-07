@@ -17,16 +17,16 @@ struct HomeMemoGridView: View {
     ]
     
     var body: some View {
-        LazyVGrid(columns: columns, spacing: 10) {
-            ForEach(data, id: \.self) { item in
-                HomeMemoItem()
+        ScrollView(showsIndicators: false) {
+            LazyVGrid(columns: columns, spacing: 10) {
+                ForEach(data, id: \.self) { item in
+                    HomeMemoItem()
+                }
             }
         }
     }
 }
 
 #Preview {
-    ScrollView {
-        HomeMemoGridView()
-    }
+    HomeMemoGridView()
 }

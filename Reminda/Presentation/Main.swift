@@ -16,8 +16,8 @@ struct Main: View {
                 .navigationDestination(for: Routes.self) { screen in
                     Group {
                         switch screen {
-                        case .Detail:
-                            Text("ok")
+                        case .AddingMemo:
+                            AddingMemo()
                         case .Profile:
                             Home()
                         case .Setting:

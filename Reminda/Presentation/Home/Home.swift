@@ -10,15 +10,10 @@ import SwiftUI
 struct Home: View {
     @EnvironmentObject private var router: Router
     
-    @State private var text = ""
-    @State private var bold = false
-    @State private var italic = false
-    @State private var fontSize = 12.0
-    
     @State private var selection: Category?
-    
-    @ObservedObject var vm = HomeViewModel()
     @State var hideNavigationBar: Bool = false
+    
+    @ObservedObject private var vm = HomeViewModel()
     
     var body: some View {
         VStack(spacing: 10){
@@ -26,26 +21,16 @@ struct Home: View {
                 HomeTabList(tabs: vm.categories, selection: $selection)
                 TabView(selection: $selection) {
                     ForEach(vm.categories, id:  \.self) { content in
-                        ScrollView(showsIndicators: false) {
-                            HomeMemoGridView()
-                        }
+                        HomeMemoGridView()
                     }
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
-                
             }
-            Text("change")
-                .onTapGesture {
-                    withAnimation(.easeInOut(duration: 31)) {
-                        hideNavigationBar.toggle()
-                    }
-                }
         }
         .fillParentSize()
         .padding(.horizontal)
-//        .navigationTitle("Notes")
-        .navigationBarTitle("Hello World", displayMode: hideNavigationBar ? .large : .inline)
-//        .navigationBarTitleDisplayMode(hideNavigationBar ? .large : .inline)
+        .navigationTitle("Notes")
+        .navigationBarTitleDisplayMode(.large)
         .toolbarBackground(.hidden, for: .navigationBar)
         .toolbar {
             ToolbarItem(placement: .navigationBarLeading) {
@@ -53,8 +38,11 @@ struct Home: View {
             }
         }
         .edgesIgnoringSafeArea(.bottom)
-        .onAppear {
-            vm.getListCategories()
+        .overlay(alignment: .bottomTrailing) {
+            CircleButtonView(iconName: "plus") {
+                router.navigateTo(.AddingMemo)
+            }
+            .padding()
         }
     }
 }

@@ -25,7 +25,7 @@ struct RemidaNavigationBarModifier: ViewModifier {
                         // Using GeometryReader to track the scroll position
                         GeometryReader { geometry in
                             Color.clear
-                                .preference(key: ScrollOffsetPreferenceKey.self, value: geometry.frame(in: .global).minY)
+                                .preference(key: ScrollViewOffsetPreferenceKey.self, value: geometry.frame(in: .global).minY)
                         }
                         .frame(height: 0) // Hidden view for tracking
                         
@@ -38,31 +38,23 @@ struct RemidaNavigationBarModifier: ViewModifier {
                         }
                     }
                 }
-                .onPreferenceChange(ScrollOffsetPreferenceKey.self) { value in
+                .onPreferenceChange(ScrollViewOffsetPreferenceKey.self) { value in
                     // Change the title based on scroll offset
                     withAnimation {
                         largeTitle = value < -100 ? false : true
                     }
                 }
             }
-            .toolbar(.hidden)
             .padding(.top, largeTitle ? 80 : 40)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .overlay(alignment: largeTitle ? .topLeading : .top) {
                 Text("Title")
-                    .font(largeTitle ? .largeTitle : .headline).bold()
+                    .font(largeTitle ? .largeTitle : .headline)
+                    .bold()
                     .padding(.top, largeTitle ? 30 : 10)
                     .padding(.horizontal)
             }
         }
-    }
-}
-// PreferenceKey for tracking scroll offset
-struct ScrollOffsetPreferenceKey: PreferenceKey {
-    typealias Value = CGFloat
-    static var defaultValue: CGFloat = 0
-    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
-        value = nextValue()
     }
 }
 

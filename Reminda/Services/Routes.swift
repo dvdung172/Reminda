@@ -16,7 +16,7 @@ class Router : ObservableObject {
 }
 
 enum Routes: Hashable, Equatable {
-    case Detail
+    case AddingMemo
     case Profile
     case Setting
     case Home
@@ -24,7 +24,7 @@ enum Routes: Hashable, Equatable {
     
     public static func == (lhs: Routes, rhs: Routes) -> Bool {
         switch (lhs, rhs) {
-        case (.Detail, .Detail),
+        case (.AddingMemo, .AddingMemo),
             (.Profile, .Profile),
             (.Setting, .Setting),
             (.Home, .Home),

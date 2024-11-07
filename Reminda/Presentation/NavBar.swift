@@ -11,7 +11,9 @@ struct NavBar: View {
     var body: some View {
         HStack {
             Spacer()
-            CircleButtonView(iconName: "magnifyingglass")
+            CircleButtonView(iconName: "magnifyingglass"){
+                
+            }
         }
         .fillScreenWidth()
     }

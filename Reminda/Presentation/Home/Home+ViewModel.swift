@@ -16,6 +16,10 @@ class HomeViewModel: ObservableObject {
     private let disposeBag = DisposeBag()
     private var categoryRepository: CategoryUsecase = RCategoryRepository.shared
     
+    init() {
+        getListCategories()
+    }
+    
     func getListCategories() {
         categoryRepository
             .getListCategories()
