@@ -17,7 +17,7 @@ struct Main: View {
                     Group {
                         switch screen {
                         case .AddingMemo:
-                            AddingMemo()
+                            ComposeMemo()
                         case .Profile:
                             Home()
                         case .Setting:
