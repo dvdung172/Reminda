@@ -11,14 +11,8 @@ import RxSwift
 class ComposeMemoViewModel: ObservableObject {
     
     // MARK: Output
-    @Published private(set) var memo : MemoItem = MemoItem(id: "", title: nil, content: nil, category: nil)
-    
     private let disposeBag = DisposeBag()
     private var memoItemRepository: MemoItemUsecase = RMemoItemRepository.shared
-    
-    init() {
-        
-    }
     
     func add(title: String?, content: String?, category: Int?) {
         memoItemRepository

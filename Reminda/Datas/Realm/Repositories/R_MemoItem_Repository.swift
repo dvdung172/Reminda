@@ -50,7 +50,7 @@ struct RMemoItemRepository: MemoItemUsecase {
         }
     }
     
-    func getListCategories() -> Single<[MemoItem]> {
+    func getList() -> Single<[MemoItem]> {
         return Single<[MemoItem]>.create { observer in
             let maybeError = RealmError(msg: "An error occurred while fetching the categories")
             

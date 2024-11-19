@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct HomeMemoGridView: View {
-    
-    let data = (1...100).map { "Item \($0)" }
+    var listItem: [MemoItem]
     
     let columns = [
-        GridItem(.flexible(), spacing: 10),
-        GridItem(.flexible(), spacing: 10)
+        GridItem(.adaptive(minimum: 150), spacing: 10)
     ]
     
     var body: some View {
         ScrollView(showsIndicators: false) {
+            
             LazyVGrid(columns: columns, spacing: 10) {
-                ForEach(data, id: \.self) { item in
-                    HomeMemoItem()
+                ForEach(listItem, id: \.self) { item in
+                    HomeMemoItem(text: item.content ?? "", color: Color.blue)
                 }
             }
         }
@@ -28,5 +27,12 @@ struct HomeMemoGridView: View {
 }
 
 #Preview {
-    HomeMemoGridView()
+    HomeMemoGridView(listItem: (1...100).map {
+        if $0 % 2 == 0 {
+            MemoItem(id: "\($0)", content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam scelerisque velit id lorem tristique rhoncus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vivamus vitae arcu ante. Mauris in ligula mi. Sed a ante et massa tincidunt bibendum vel vel arcu. Proin eget tortor pulvinar, tincidunt velit eu, scelerisque dolor. Proin vel eros quis diam tincidunt semper venenatis vel augue. Aliquam posuere et lorem vel aliquam." )
+        }
+        else {
+            MemoItem(id: "\($0)", content: "Item \($0)" )
+        }
+    })
 }

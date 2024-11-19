@@ -12,12 +12,16 @@ class HomeViewModel: ObservableObject {
     
     // MARK: Output
     @Published private(set) var categories : [Category] = []
+    @Published private(set) var memoItems : [MemoItem] = []
     
     private let disposeBag = DisposeBag()
     private var categoryRepository: CategoryUsecase = RCategoryRepository.shared
-    
+    private var memoItemRepository: MemoItemUsecase = RMemoItemRepository.shared
+
     init() {
         getListCategories()
+        getListMemoItems()
+        print(memoItems)
     }
     
     func getListCategories() {
@@ -31,6 +35,19 @@ class HomeViewModel: ObservableObject {
             }
             .disposed(by: disposeBag)
     }
+    
+    func getListMemoItems() {
+        memoItemRepository
+            .getList()
+            .asObservable()
+            .subscribe { [weak self] items in
+                self?.memoItems = items
+            } onError: { error in
+                print("\(error)")
+            }
+            .disposed(by: disposeBag)
+    }
+    
     func add() {
         categoryRepository
             .insertCategory(category: Category(id: UUID().uuidString, title: "memory") )

@@ -44,5 +44,5 @@ struct EditableView: UIViewRepresentable {
 }
 
 #Preview {
-    return EditableView(attributedText: .constant(NSMutableAttributedString.init(string: "text")))
+    return EditableView(attributedText: .constant(NSMutableAttributedString.init(string: "")))
 }

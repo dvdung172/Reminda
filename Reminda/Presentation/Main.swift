@@ -11,26 +11,7 @@ struct Main: View {
     @EnvironmentObject private var router: Router
     
     var body: some View {
-        NavigationStack(path: $router.navigationPath) {
             Home()
-                .navigationDestination(for: Routes.self) { screen in
-                    Group {
-                        switch screen {
-                        case .AddingMemo:
-                            ComposeMemo()
-                        case .Profile:
-                            Home()
-                        case .Setting:
-                            Home()
-                        case .none:
-                            EmptyView()
-                        case .Home:
-                            Home()
-                        }
-                    }
-//                    .navigationBarBackButtonHidden()
-                }
-        }
     }
 }
 

@@ -16,7 +16,7 @@ extension View {
     
     func fillParentWidth(alignment: Alignment = .center) -> some View {
         return self
-            .frame(maxWidth: UIConstants.screenWidth, alignment: alignment)
+            .frame(maxWidth: .infinity, alignment: alignment)
     }
     
     func fillParentHeight(alignment: Alignment = .center) -> some View {
@@ -34,13 +34,4 @@ extension View {
             .frame(width: UIConstants.screenWidth, alignment: alignment)
     }
     
-//    func fillListItemWidthInWhiteBox(alignment: Alignment = .center, additionPadding: CGFloat = 0.0) -> some View {
-//        return self
-//            .frame(width: UIScreen.main.bounds.width - UIConstants.fullWidthInWhiteBoxOffset - additionPadding, alignment: alignment)
-//    }
-//    
-//    func fillListItemWidth(alignment: Alignment = .center) -> some View {
-//        return self
-//            .frame(width: UIScreen.main.bounds.width - UIConstants.fullWidthOffset, alignment: alignment)
-//    }
 }
