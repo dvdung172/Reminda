@@ -19,7 +19,12 @@ class RMemoItem: Object {
 
 extension RMemoItem {
     func toMemoItem() -> MemoItem {
-        return MemoItem(id: self.id, title: self.title , content: self.content, category: self.category)
+        return MemoItem(id: self.id, 
+                        title: self.title,
+                        content: self.content,
+                        category: self.category,
+                        dateAdded: self.dateAdded,
+                        dateUpdate: self.dateUpdate)
     }
     
     func fromMemoItem(memoItem: MemoItem) {
@@ -27,7 +32,7 @@ extension RMemoItem {
         self.title = memoItem.title
         self.content = memoItem.content
         self.category = memoItem.category
-        self.dateAdded = Date()
-        self.dateUpdate = Date()
+        self.dateAdded = memoItem.dateAdded
+        self.dateUpdate = memoItem.dateUpdate
     }
 }

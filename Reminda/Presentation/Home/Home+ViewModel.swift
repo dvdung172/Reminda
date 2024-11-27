@@ -17,43 +17,36 @@ class HomeViewModel: ObservableObject {
     private let disposeBag = DisposeBag()
     private var categoryRepository: CategoryUsecase = RCategoryRepository.shared
     private var memoItemRepository: MemoItemUsecase = RMemoItemRepository.shared
-
+    
     init() {
-        getListCategories()
-        getListMemoItems()
-        print(memoItems)
+        getData()
     }
-    
-    func getListCategories() {
+}
+
+extension HomeViewModel {
+    func getData() {
+        Single.zip(
+            categoryRepository.getListCategories(),
+            memoItemRepository.getList()
+        )
+        .asObservable()
+        .subscribe { [weak self] categories, items in
+            self?.categories = categories
+            self?.memoItems = items
+        } onError: { error in
+            print("\(error)")
+        }
+        .disposed(by: disposeBag)
+        
+    }
+}
+
+extension HomeViewModel {
+    func update(category: Category) {
         categoryRepository
-            .getListCategories()
-            .asObservable()
-            .subscribe { [weak self] categories in
-                self?.categories = categories
-            } onError: { error in
-                print("\(error)")
-            }
-            .disposed(by: disposeBag)
-    }
-    
-    func getListMemoItems() {
-        memoItemRepository
-            .getList()
-            .asObservable()
-            .subscribe { [weak self] items in
-                self?.memoItems = items
-            } onError: { error in
-                print("\(error)")
-            }
-            .disposed(by: disposeBag)
-    }
-    
-    func add() {
-        categoryRepository
-            .insertCategory(category: Category(id: UUID().uuidString, title: "memory") )
-            .asObservable()
-            .subscribe { [weak self] categories in
-//                self?.getListCategories()
+            .updateCategory(category: category)
+            .subscribe { [weak self] in
+                self?.categories[0] = category
             } onError: { error in
                 print("\(error)")
             }

@@ -20,8 +20,7 @@ struct Home: View {
                     HomeTabList(tabs: vm.categories, selection: $selection)
                     TabView(selection: $selection) {
                         ForEach(vm.categories, id:  \.self) { category in
-                            let listItems = (1...100).map { MemoItem(id: "\($0)", content: "\($0)" ) }
-                            HomeMemoGridView(listItem: listItems)
+                            HomeMemoGridView(listItem: vm.memoItems)
                         }
                     }
                     .tabViewStyle(.page(indexDisplayMode: .never))
@@ -35,6 +34,9 @@ struct Home: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Image(systemName: "line.3.horizontal")
+                        .onTapGesture {
+                            vm.update(category: Category())
+                        }
                 }
             }
             .edgesIgnoringSafeArea(.bottom)

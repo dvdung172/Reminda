@@ -19,7 +19,12 @@ class RCategory: Object {
 
 extension RCategory {
     func toCategory() -> Category {
-        return Category(id: self.id, title: self.title ?? "", icon: self.icon, index: self.index)
+        return Category(id: self.id,
+                        title: self.title ?? "",
+                        icon: self.icon,
+                        index: self.index,
+                        dateAdded: self.dateAdded,
+                        dateUpdate: self.dateUpdate)
     }
     
     func fromCategory(category: Category) {
@@ -27,7 +32,7 @@ extension RCategory {
         self.title = category.title
         self.icon = category.icon
         self.index = category.index
-        self.dateAdded = Date()
-        self.dateUpdate = Date()
+        self.dateAdded = category.dateAdded
+        self.dateUpdate = category.dateUpdate
     }
 }

@@ -30,6 +30,8 @@
 		D90AA1AD2CDC95ED00401E3A /* EditableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D90AA1AC2CDC95EC00401E3A /* EditableView.swift */; };
 		D95D99642CE44A8300FADAF0 /* ComposeMemo+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95D99632CE44A8300FADAF0 /* ComposeMemo+ViewModel.swift */; };
 		D95D996B2CEC6F5000FADAF0 /* RCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95D996A2CEC6F5000FADAF0 /* RCollectionView.swift */; };
+		D95D996D2CEE3FEE00FADAF0 /* RCollectionView+Additional.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95D996C2CEE3FEE00FADAF0 /* RCollectionView+Additional.swift */; };
+		D95D996F2CF226F800FADAF0 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95D996E2CF226F800FADAF0 /* UIApplicationExtension.swift */; };
 		D9D210AD2CA9A0BA00EB6A4C /* RemindaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */; };
 		D9D210AF2CA9A0BA00EB6A4C /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D210AE2CA9A0BA00EB6A4C /* LaunchView.swift */; };
 		D9D210B12CA9A0BC00EB6A4C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9D210B02CA9A0BC00EB6A4C /* Assets.xcassets */; };
@@ -95,6 +97,8 @@
 		D90AA1AC2CDC95EC00401E3A /* EditableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditableView.swift; sourceTree = "<group>"; };
 		D95D99632CE44A8300FADAF0 /* ComposeMemo+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ComposeMemo+ViewModel.swift"; sourceTree = "<group>"; };
 		D95D996A2CEC6F5000FADAF0 /* RCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCollectionView.swift; sourceTree = "<group>"; };
+		D95D996C2CEE3FEE00FADAF0 /* RCollectionView+Additional.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RCollectionView+Additional.swift"; sourceTree = "<group>"; };
+		D95D996E2CF226F800FADAF0 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		D9D210A92CA9A0BA00EB6A4C /* Reminda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reminda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9D210AC2CA9A0BA00EB6A4C /* RemindaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindaApp.swift; sourceTree = "<group>"; };
 		D9D210AE2CA9A0BA00EB6A4C /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
@@ -368,6 +372,7 @@
 				D9D210EE2CAEE97A00EB6A4C /* Constants */,
 				D9D210E32CAE3E1B00EB6A4C /* ViewExtensions */,
 				D9D210F82CAEF12100EB6A4C /* ColorExtensions.swift */,
+				D95D996E2CF226F800FADAF0 /* UIApplicationExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +435,7 @@
 				D90AA1A52CD5356300401E3A /* ObservableScrollView.swift */,
 				D90AA1AA2CD9073E00401E3A /* RButton.swift */,
 				D95D996A2CEC6F5000FADAF0 /* RCollectionView.swift */,
+				D95D996C2CEE3FEE00FADAF0 /* RCollectionView+Additional.swift */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -452,6 +458,8 @@
 			dependencies = (
 			);
 			name = Reminda;
+			packageProductDependencies = (
+			);
 			productName = Reminda;
 			productReference = D9D210A92CA9A0BA00EB6A4C /* Reminda.app */;
 			productType = "com.apple.product-type.application";
@@ -527,6 +535,8 @@
 				Base,
 			);
 			mainGroup = D9D210A02CA9A0BA00EB6A4C;
+			packageReferences = (
+			);
 			productRefGroup = D9D210AA2CA9A0BA00EB6A4C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -676,6 +686,7 @@
 				D90AA1772CB4339D00401E3A /* Category.swift in Sources */,
 				D9D210ED2CAEE95E00EB6A4C /* ViewExtension+Dimens.swift in Sources */,
 				D9D210E02CAD93E500EB6A4C /* Main.swift in Sources */,
+				D95D996D2CEE3FEE00FADAF0 /* RCollectionView+Additional.swift in Sources */,
 				D90AA1862CB6D64B00401E3A /* HomeMemoItem.swift in Sources */,
 				D90AA1922CBD733700401E3A /* R_Category_Repository.swift in Sources */,
 				D90AA1942CCA2F2600401E3A /* RealmSuppoters.swift in Sources */,
@@ -683,6 +694,7 @@
 				D9D210F62CAEF09C00EB6A4C /* CircleButtonView.swift in Sources */,
 				D95D996B2CEC6F5000FADAF0 /* RCollectionView.swift in Sources */,
 				D9D210E82CAE3F6400EB6A4C /* ViewExtension+Preview.swift in Sources */,
+				D95D996F2CF226F800FADAF0 /* UIApplicationExtension.swift in Sources */,
 				D9D210E22CADAA9700EB6A4C /* Routes.swift in Sources */,
 				D90AA17B2CB4348C00401E3A /* CategoryUsecase.swift in Sources */,
 				D90AA1AB2CD9073E00401E3A /* RButton.swift in Sources */,

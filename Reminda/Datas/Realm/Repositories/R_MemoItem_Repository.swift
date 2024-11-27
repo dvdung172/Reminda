@@ -65,17 +65,16 @@ struct RMemoItemRepository: MemoItemUsecase {
         }
     }
     
-    func updateMemoItem(id: String, title: String?, content: String?, category: Int?) -> Completable {
+    func updateMemoItem(memoItem: MemoItem) -> Completable {
         return Completable.create { observer in
             let maybeError = RealmError(msg: "An error occurred while saving the MemoItem")
 
             do {
-                let memoItem = realm?.objects(RMemoItem.self).first(where: { $0.id == id})
+                let r_MemoItem = RMemoItem()
+                r_MemoItem.fromMemoItem(memoItem: memoItem)
                 
                 try realm?.write {
-                    memoItem?.title = title
-                    memoItem?.content = content
-                    memoItem?.category = category
+                    realm?.add(r_MemoItem, update: .modified)
                     
                     observer(.completed)
                 }

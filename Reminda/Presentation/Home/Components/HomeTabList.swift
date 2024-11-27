@@ -46,8 +46,8 @@ struct HomeTabList: View {
 }
 
 #Preview {
-    @State var selection: Category? = Category(id: "0", title: "tab1", icon: nil)
-    let tabStack = [Category(id: "0", title: "tab1", icon: nil), Category(id: "1", title: "tab2", icon: nil)]
+    @State var selection: Category? = Category(id: "0", title: "tab1", icon: nil, dateAdded: Date(), dateUpdate: Date())
+    let tabStack = [Category(id: "0", title: "tab1", icon: nil, dateAdded: Date(), dateUpdate: Date()), Category(id: "1", title: "tab2", icon: nil, dateAdded: Date(), dateUpdate: Date())]
     return HomeTabList(tabs: tabStack, selection: $selection)
 }
 

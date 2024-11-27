@@ -12,4 +12,16 @@ struct Category: Decodable, Hashable {
     var title: String
     var icon: String?
     var index: Int?
+    var dateAdded: Date
+    var dateUpdate: Date
+}
+extension Category {
+    init() {
+        self.id = UUID().uuidString
+        self.title = ""
+        self.icon = nil
+        self.index = nil
+        self.dateAdded = Date()
+        self.dateUpdate = Date()
+    }
 }

@@ -18,7 +18,7 @@ struct RCategoryRepository: CategoryUsecase {
     func insertCategory(category: Category) -> Completable {
         return Completable.create { observer in
             let maybeError = RealmError(msg: "An error occurred while saving the category")
-
+            
             do {
                 let r_category = RCategory()
                 r_category.fromCategory(category: category)
@@ -65,17 +65,16 @@ struct RCategoryRepository: CategoryUsecase {
         }
     }
     
-    func updateCategory(id: String, title: String, icon: String?, index: Int? ) -> Completable {
+    func updateCategory(category: Category) -> Completable {
         return Completable.create { observer in
             let maybeError = RealmError(msg: "An error occurred while saving the category")
-
+            
             do {
-                let category = realm?.objects(RCategory.self).first(where: { $0.id == id})
+                let r_category = RCategory()
+                r_category.fromCategory(category: category)
                 
                 try realm?.write {
-                    category?.title = title
-                    category?.icon = icon
-                    category?.index = index
+                    realm?.add(r_category, update: .modified)
                     
                     observer(.completed)
                 }

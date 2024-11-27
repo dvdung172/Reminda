@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Main: View {
     @EnvironmentObject private var router: Router
-    
+
     var body: some View {
             Home()
     }

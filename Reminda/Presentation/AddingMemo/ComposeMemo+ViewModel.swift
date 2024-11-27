@@ -10,16 +10,42 @@ import RxSwift
 
 class ComposeMemoViewModel: ObservableObject {
     
+    @Published private(set) var memoItem : MemoItem = MemoItem()
+    
     // MARK: Output
     private let disposeBag = DisposeBag()
     private var memoItemRepository: MemoItemUsecase = RMemoItemRepository.shared
     
-    func add(title: String?, content: String?, category: Int?) {
+    init() {
+    }
+}
+
+extension ComposeMemoViewModel {
+    func setUpVM(memoItem: MemoItem) {
+        self.memoItem = memoItem
+    }
+}
+
+extension ComposeMemoViewModel {
+    func add() {
         memoItemRepository
-            .insertMemoItem(memoItem: MemoItem(id: UUID().uuidString, title: title, content: content, category: category))
+            .insertMemoItem(memoItem: self.memoItem)
             .asObservable()
             .subscribe { _ in
                 
+            } onError: { error in
+                print("\(error)")
+            }
+            .disposed(by: disposeBag)
+    }
+}
+
+extension ComposeMemoViewModel {
+    func update() {
+        memoItemRepository
+            .updateMemoItem(memoItem: self.memoItem)
+            .subscribe { [weak self] in
+//                self?.categories[0] = category
             } onError: { error in
                 print("\(error)")
             }
